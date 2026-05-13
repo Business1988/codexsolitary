@@ -38,3 +38,17 @@ test("contact page contains all inboxes and names", () => {
   assert.match(html, /support@codexsolitary\.com/i);
   assert.match(html, /Technical Assistance/i);
 });
+
+test("privacy page contains a fuller policy structure", () => {
+  const html = read("privacy.html");
+  assert.match(html, /Information We Collect/i);
+  assert.match(html, /How We Use Information/i);
+  assert.match(html, /Advertising and Analytics/i);
+  assert.match(html, /Third-Party Services/i);
+  assert.match(html, /Data Retention/i);
+  assert.match(html, /International Transfers/i);
+  assert.match(html, /Your Rights/i);
+  assert.match(html, /Children's Privacy/i);
+  assert.match(html, /Data Security/i);
+  assert.match(html, /business@codexsolitary\.com/i);
+});
